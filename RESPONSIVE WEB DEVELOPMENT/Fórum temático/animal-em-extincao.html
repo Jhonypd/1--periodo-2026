@@ -77,6 +77,56 @@
         margin-top: 20px;
         font-weight: bold;
       }
+
+      /* --- ESTILOS DA PAGINAÇÃO --- */
+      .pagination-area {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      .pagination-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        border: 1px solid #4db8ff;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      /* Combinador de descendência para as bordas dos itens */
+      .pagination-list li {
+        border-right: 1px solid #4db8ff;
+      }
+
+      .pagination-list li:last-child {
+        border-right: none;
+      }
+
+      /* Combinador para os links */
+      .pagination-list li a {
+        display: block;
+        padding: 10px 18px;
+        text-decoration: none;
+        color: #4db8ff;
+        background-color: #1a262f;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      /* Efeito 'Hover' (Quando passar o mouse) */
+      .pagination-list li a:hover {
+        background-color: #4db8ff;
+        color: #0b131a;
+      }
+
+      /* Estilo para a página atual */
+      .pagination-list li.active a {
+        background-color: #2c3e50;
+        color: #fff;
+        cursor: default;
+      }
     </style>
   </head>
   <body>
@@ -116,7 +166,7 @@
         </div>
 
         <div class="card">
-          <img src="img/leopardo-das-neves-3" alt="Leopardo olhando" />
+          <img src="img/leopardo-das-neves-3.jpg" alt="Leopardo olhando" />
           <div class="card-content">
             <h3>Cauda Protetora</h3>
             <p>
@@ -136,6 +186,16 @@
         seu habitat é crucial para que esse "fantasma" não desapareça para
         sempre.
       </p>
+
+      <nav class="pagination-area">
+        <ul class="pagination-list">
+          <li><a href="notas.html">&laquo;</a></li>
+          <li><a href="notas.html">1</a></li>
+          <li><a href="carta.html">2</a></li>
+          <li class="active"><a href="leopardo.html">3</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
